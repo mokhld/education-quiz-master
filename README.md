@@ -1,4 +1,10 @@
-# ComponentThreeOmar
+# Education Quiz App
+
+Functional CRUD app for both Students and Teachers, allowing students to login with Google OAuth and take mulitple quizzes. The result of each quiz is also dynamically produced. Features a Master Teacher login, allowing teachers to add, edit and delete quizzes and questions.
+Created in Angular and linked to Firebase serverless database.
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
