@@ -6,8 +6,21 @@ Deployed on Netlify and created a CI/CD tunnel:
 
 https://educational-quiz.netlify.app
 
+Login Page:
+
 <a href="https://ibb.co/3dSjpBq"><img src="https://i.ibb.co/wgpPSMX/Screenshot-2021-02-04-at-11-13-09.png" alt="Screenshot-2021-02-04-at-11-13-09" border="0"></a>
 
+Add New Question- Teacher Dashboard:
+
+<a href="https://ibb.co/34mQKGG"><img src="https://i.ibb.co/5GhwZtt/Screenshot-2021-02-04-at-11-40-40.png" alt="Screenshot-2021-02-04-at-11-40-40" border="0"></a>
+
+Student Dashboard Functionality:
+
+<a href="https://ibb.co/2542rbN"><img src="https://i.ibb.co/QXwBV5d/Screenshot-2021-02-04-at-13-03-46.png" alt="Screenshot-2021-02-04-at-13-03-46" border="0"></a>
+
+<a href="https://ibb.co/Ydtxcqx"><img src="https://i.ibb.co/yk8r6br/Screenshot-2021-02-04-at-13-04-14.png" alt="Screenshot-2021-02-04-at-13-04-14" border="0"></a>
+
+<a href="https://ibb.co/hKZHYxH"><img src="https://i.ibb.co/19dKzYK/Screenshot-2021-02-04-at-13-04-31.png" alt="Screenshot-2021-02-04-at-13-04-31" border="0"></a>
 
 
 
