@@ -37,35 +37,25 @@ export class TakeQuizComponent implements OnInit {
           console.log(this.shareData.quizOptions[i]);
 
           try {
+
+            this.db.collection('Year 8 Quizzes').doc(this.shareData.quizOptions[i]).collection('questions').get()
+            .then((snapshot) => {
+              snapshot.docs.forEach((x) => {
+                //Extract the data needed for the quiz and push into the quizQuestions array
+                this.quizQuestions.push({
+                  Question: x.data().question,
+                  Answer: x.data().answer,
+                  Option1: x.data().option1,
+                  Option2: x.data().option2,
+                  Option3: x.data().option3,
+                  Option4: x.data().option4,
+                });
+                console.log(this.quizQuestions);
+              });
+            });
+
             //Load the quiz
             //Search Students based on Year group
-            this.db
-              .collection('Students')
-              .where('YearGroup', '==', '8')
-              .onSnapshot((snapshot) => {
-                snapshot.docs.forEach((doc) => {
-                  //Extract the quiz for the Year 8 student
-                  this.db
-                    .collection('Year 8 Quizzes')
-                    .doc(this.shareData.quizOptions[i])
-                    .collection('questions')
-                    .get()
-                    .then((snapshot) => {
-                      snapshot.docs.forEach((x) => {
-                        //Extract the data needed for the quiz and push into the quizQuestions array
-                        this.quizQuestions.push({
-                          Question: x.data().question,
-                          Answer: x.data().answer,
-                          Option1: x.data().option1,
-                          Option2: x.data().option2,
-                          Option3: x.data().option3,
-                          Option4: x.data().option4,
-                        });
-                        console.log(this.quizQuestions);
-                      });
-                    });
-                });
-              });
           } catch (error) {
             console.log(error.message);
           }
@@ -75,6 +65,8 @@ export class TakeQuizComponent implements OnInit {
       console.log(error.message);
     }
   }
+
+
 
   //Get Students Answer for the Quiz
 
