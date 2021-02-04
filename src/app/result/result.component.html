@@ -1,0 +1,28 @@
+<h3 class="compTitle">Results</h3>
+<mat-grid-list cols="2" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-card class="quizNameResult">
+        <mat-card-title class="studentInfoTitles">Quiz Name</mat-card-title>
+        <mat-card-subtitle class="studentInfoSub">{{resultQuizName}}</mat-card-subtitle>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="quizNameScore">
+        <mat-card-title class="studentInfoTitles">Your Score</mat-card-title>
+        <mat-card-subtitle class="studentInfoSub">{{score}}</mat-card-subtitle>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <hr class="lineBreak">
+
+  <div class="questionCards">
+    <mat-card class="example-card" *ngFor="let result of resultBreakdown">
+        <mat-card-header>
+        <mat-card-title>{{result.Q}}</mat-card-title>
+        <mat-card-subtitle><h3> Your Answer:  {{result.A}}</h3></mat-card-subtitle>
+        <mat-card-subtitle [ngStyle]="{color: result.M === 'Correct' ? 'green' : 'red'}"><h3>{{result.M}}</h3></mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>
+<br>
+<br>

@@ -1,0 +1,17 @@
+<div class="teacher-login">
+  <button class="close-dialog" (click)="closeDialog()">
+    <mat-icon >clear</mat-icon>
+  </button>
+  <h3 class="pass-key">Teacher Access</h3>
+  <mat-form-field class="pass-key-input">
+    <input
+      type="password"
+      matInput
+      placeholder="Enter Pass Key"
+      [(ngModel)]="teacherPassKey"
+      name="Pass Key"
+    />
+  </mat-form-field>
+  <br>
+  <button class="verify-btn" mat-button (click)="teacherAccess()">Verify</button>
+</div>

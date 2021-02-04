@@ -1,0 +1,41 @@
+<div class="regContainer">
+    <a routerLink="">
+        <mat-icon class="backBtn" matPrefix> arrow_back</mat-icon> 
+    </a>
+    <img class="avatar" src="../assets/images/loginAvatar.png">
+  
+    <h3 class="regTitle">Create an Account</h3>
+    <br>
+  
+    <form class="reg-form">
+        
+      <mat-form-field class="inputScale">	
+        <input required='true' matInput placeholder="Full Name" [(ngModel)]="student.fullName" name="studentName">
+      </mat-form-field>
+      <mat-form-field class="inputScale">
+        <mat-label>Select Teacher</mat-label>
+        <mat-select [(ngModel)]="student.teacher" name="studentTeacher" required>
+          <mat-option value='Mr Johnson'>Mr Johnson</mat-option>
+          <mat-option value='Miss Wilne'>Miss Wilne</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="inputScale">	
+        <input matInput required='true' placeholder="Class" [(ngModel)]="student.class" name="studentClass">
+      </mat-form-field>
+      <mat-form-field class="inputScale">	
+        <input matInput required='true' placeholder="Year Group" [(ngModel)]="student.yearGroup" name="studentYearGroup">
+      </mat-form-field>
+      <mat-form-field class="inputScale">	
+        <input matInput required='true' placeholder="Primary Key" [(ngModel)]="student.primaryKey" name="studentPrimaryKey">
+      </mat-form-field>
+      <mat-form-field class="inputScale">	
+        <input matInput required='true' placeholder="Email" [(ngModel)]="student.email" name="studentEmail">
+      </mat-form-field>
+      <mat-form-field class="inputScale">	
+        <input matInput required='true' type="password" placeholder="Password" [(ngModel)]="student.password" name="studentPassword">
+      </mat-form-field>
+      <br>
+      <button (click)="createAccount()" class="regButton" mat-button>Create Account</button>
+    </form>
+    
+  </div>

@@ -1,0 +1,54 @@
+<h3 class="compTitle"> Select a Quiz</h3>
+<br>
+<hr>
+<mat-tab-group mat-stretch-tabs>
+    <mat-tab label="Algebra"> 
+            <mat-card class="example-card" *ngFor="let quiz of algebraQuizzes">
+                <mat-card-header>
+                <mat-card-title>{{quiz.ID}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-actions>
+                    <a [routerLink]="['/student', quiz.ID]">
+                        <button class="takeQuizBtn" mat-button>Take Quiz</button>
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+    </mat-tab>
+    <mat-tab label="Geometry"> 
+        <mat-card class="example-card" *ngFor="let quiz of geometryQuizzes">
+            <mat-card-header>
+            <mat-card-title>{{quiz.ID}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-actions>
+                <a [routerLink]="['/student', quiz.ID]">
+                    <button class="takeQuizBtn" mat-button>Take Quiz</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+        
+    </mat-tab>
+    <mat-tab label="Number"> 
+        <mat-card class="example-card" *ngFor="let quiz of numberQuizzes">
+            <mat-card-header>
+            <mat-card-title>{{quiz.ID}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-actions>
+                <a [routerLink]="['/student', quiz.ID]">
+                    <button class="takeQuizBtn" mat-button>Take Quiz</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="Stats">  
+        <mat-card class="example-card" *ngFor="let quiz of statsQuizzes">
+            <mat-card-header>
+            <mat-card-title>{{quiz.ID}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-actions>
+                <a [routerLink]="['/student', quiz.ID]">
+                    <button class="takeQuizBtn" mat-button>Take Quiz</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </mat-tab>
+  </mat-tab-group>

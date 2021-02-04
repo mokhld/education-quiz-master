@@ -1,0 +1,35 @@
+<h1 class="quizName">
+    Maths Quiz: {{quizName}}
+</h1>
+<hr>
+<h3 class="quizInstructionTitle">Quiz Instructions</h3>
+<br>
+<ul class="instrucList">
+  <li>Read each question carefully</li>
+  <li>You have one attempt to answer each question</li>
+</ul>
+<mat-horizontal-stepper>
+    <mat-step *ngFor="let loadQuiz of quizQuestions" completed="false">
+        <h2>{{loadQuiz.Question}}</h2>
+        <mat-selection-list [multiple]="false" [(ngModel)]="quizResponse">
+            <mat-list-option [value]="loadQuiz.Option1">
+              {{loadQuiz.Option1}}
+            </mat-list-option>
+            <mat-list-option [value]="loadQuiz.Option2">
+              {{loadQuiz.Option2}}
+            </mat-list-option>
+            <mat-list-option [value]="loadQuiz.Option3">
+              {{loadQuiz.Option3}}
+            </mat-list-option>
+            <mat-list-option [value]="loadQuiz.Option4">
+              {{loadQuiz.Option4}}
+            </mat-list-option>
+            <!-- <button class="selectAnswer" (click)="getResponse($event, loadQuiz)" mat-button>Submit Answer</button> -->
+        </mat-selection-list>
+        <button class="nxtBtn" (click)="getResponse($event, loadQuiz)" mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <h2 class="quizComplete">Quiz {{quizName}} Complete</h2>
+      <button class="submitQuiz" (click)="submitQuiz()" mat-button>Submit Quiz</button>
+    </mat-step>
+</mat-horizontal-stepper>

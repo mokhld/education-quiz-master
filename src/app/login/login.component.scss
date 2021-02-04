@@ -1,0 +1,71 @@
+
+.avatar {
+    width: 50%;
+    opacity: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.loginContainer {
+    width: 30%;
+    padding: 3% 4% 2% 4%;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.29);
+    box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.29);
+}
+
+.loginHeader {
+    text-align: center;
+    font-size: 35px !important;
+    font-family: 'Raleway';
+    font-weight: 8000;
+}
+
+.loginTitle {
+    text-align: center;
+    font-size: 20px !important;
+    font-family: 'Raleway';
+    font-weight: 500;
+}
+.login-form {
+    text-align: center;
+}
+.inputScale{
+    width: 100%;
+  }
+.loginButton {
+    margin-top: 10%;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #328BB4;
+    color: white;
+    font-size: 15px;
+}
+
+.teacherLoginButton {
+    margin-top: 15% !important;
+    width: 70%;
+    height: 50px;
+    border: none;
+    background-color: #5532b4;
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+}
+.signUp{
+    font-family: 'Raleway';
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 15%;
+}
+.signUpLink {
+    text-decoration: none;
+    font-weight: 700;
+    color: #328BB4;
+}

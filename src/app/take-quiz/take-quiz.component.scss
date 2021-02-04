@@ -1,0 +1,38 @@
+::ng-deep .mat-horizontal-stepper-header {
+    pointer-events: none !important;
+}
+
+.quizName{
+    text-align: center;
+    padding: 2%;
+}
+
+.quizComplete {
+    text-align: center;
+    font-size: 30px;
+    color: green;
+}
+
+.quizInstructionTitle {
+    text-align: center;
+    font-size: 30px;
+}
+
+.submitQuiz {
+    background: green;
+    margin-top: 2%;
+    color: white;
+    width: 100%;
+    height: 50px;
+    border-radius: 0 !important;
+}
+
+.nxtBtn {
+    margin-top: 2%;
+    margin-right:2%;
+    background-color: #385a8a;
+    color: #F5F5F5;
+    width: 100%;
+    height: 55px;
+}
+

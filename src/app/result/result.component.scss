@@ -1,0 +1,56 @@
+.compTitle {
+  margin-left: 2%;
+  margin-top: 2%;
+  font-size: 25px !important;
+  color: #747474;
+  font-weight: 500;
+}
+.mat-grid-list {
+    display: block;
+    position: relative;
+    margin: 50px;
+}
+  mat-grid-tile {
+    display: flex;
+    margin-right: 40px !important;
+  }
+  .quizNameResult {
+    -webkit-box-shadow: 0px 0px 35px -13px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 0px 35px -13px rgba(0,0,0,0.36);
+    box-shadow: 0px 0px 35px -13px rgba(0,0,0,0.36);
+    width: 100%;
+  }
+
+  .quizNameScore {
+    -webkit-box-shadow: 0px 0px 35px -13px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 0px 35px -13px rgba(0,0,0,0.36);
+    box-shadow: 0px 0px 35px -13px rgba(0,0,0,0.36);
+    width: 70%;
+  }
+  
+  .studentInfoTitles {
+    font-weight: 500 !important;
+    font-size: 18px;
+    color: #A6ACAF;
+  }
+  
+  .studentInfoSub {
+    font-size: 25px;
+    font-weight: 300;
+    color: #343434;
+  }
+
+  .lineBreak {
+    width: 80%;
+    opacity: 30%;
+  }
+
+  .example-card{
+    width: 850px;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    -webkit-box-shadow: 0px 0px 35px -13px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 0px 35px -13px rgba(0,0,0,0.36);
+}

@@ -1,0 +1,32 @@
+<div class="loginContainer">
+    <img class="avatar" src="../assets/images/loginAvatar.png">
+    <h3 class="loginHeader">Educational Quiz Dashboard</h3>
+    <h4 class="loginTitle">Login</h4>
+    <br>
+  
+    <form class="login-form">
+      <mat-form-field class="inputScale">	
+        <input matInput placeholder="Email Address" [(ngModel)]="student.email" name="studentEmail">
+      </mat-form-field>
+      <mat-form-field class="inputScale">	
+        <input type="password" matInput placeholder="Password" [(ngModel)]="student.password" name="studentPassword">
+      </mat-form-field>
+      <br>
+      <button (click)="login()" class="loginButton" mat-button>Login</button>
+      <br>
+      <h5 class="signUp">Do not have an account? <a class="signUpLink" routerLink="/register">Sign up</a></h5>
+    </form>
+
+    <button (click)="openDialog()" class="teacherLoginButton" mat-button>Teacher Login</button>
+    
+    <!-- <div  class="git-container">
+      <img class="git-link" src="..assets/images/giticon.png">
+    </div> --!>
+    
+  </div>
+
+  
+
+  <!-- <button (click)="generateStudents()" mat-button>Generate Students</button> -->
+
+  

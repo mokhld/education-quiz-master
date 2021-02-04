@@ -1,0 +1,66 @@
+<h3 class="compTitle"> Performance</h3>
+<br>
+<hr>
+<mat-tab-group mat-stretch-tabs>
+    <mat-tab label="Algebra"> 
+
+
+            <mat-card class="example-card" *ngFor="let a of algebra">
+                <mat-card-header>
+                <mat-card-title>{{a.QuizID}}</mat-card-title>
+                <mat-card-subtitle><h3 class="completedSubT">Completed</h3></mat-card-subtitle>
+                <mat-card-subtitle><h4>Click below to view the breakdown of your quiz</h4></mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-actions>
+                    <a [routerLink]="['/student/performance/results', a.QuizID]">
+                        <button class="quizOverview" mat-button>Quiz Overview</button>
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+ 
+
+    </mat-tab>
+    <mat-tab label="Geometry"> 
+        <mat-card class="example-card" *ngFor="let g of geometry">
+            <mat-card-header>
+                <mat-card-title>{{g.QuizID}}</mat-card-title>
+                <mat-card-subtitle><h3 class="completedSubT">Completed</h3></mat-card-subtitle>
+                <mat-card-subtitle><h4>Click below to view the breakdown of your quiz</h4></mat-card-subtitle>
+                </mat-card-header>
+            <mat-card-actions>
+                <a [routerLink]="['/student/performance/results', g.QuizID]">
+                    <button class="quizOverview" mat-button>Quiz Overview</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+        
+    </mat-tab>
+    <mat-tab label="Number"> 
+        <mat-card class="example-card" *ngFor="let n of number">
+            <mat-card-header>
+                <mat-card-title>{{n.QuizID}}</mat-card-title>
+                <mat-card-subtitle><h3 class="completedSubT">Completed</h3></mat-card-subtitle>
+                <mat-card-subtitle><h4>Click below to view the breakdown of your quiz</h4></mat-card-subtitle>
+                </mat-card-header>
+            <mat-card-actions>
+                <a [routerLink]="['/student/performance/results', n.QuizID]">
+                    <button class="quizOverview" mat-button>Quiz Overview</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="Stats"> 
+        <mat-card class="example-card" *ngFor="let s of stats">
+            <mat-card-header>
+                <mat-card-title>{{s.QuizID}}</mat-card-title>
+                <mat-card-subtitle><h3 class="completedSubT">Completed</h3></mat-card-subtitle>
+                <mat-card-subtitle><h4>Click below to view the breakdown of your quiz</h4></mat-card-subtitle>
+                </mat-card-header>
+            <mat-card-actions>
+                <a [routerLink]="['/student/performance/results', s.QuizID]">
+                    <button class="quizOverview" mat-button>Quiz Overview</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </mat-tab>
+  </mat-tab-group>

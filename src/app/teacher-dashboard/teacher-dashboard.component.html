@@ -1,0 +1,39 @@
+<h1>Welcome!</h1>
+<div class="add-quiz-container">
+  <h3 class="quiz-heading">Add New Question</h3>
+  
+  <form class="quiz-form">
+    <mat-form-field class="inputScale">
+      <mat-label>Choose Quiz Type</mat-label>
+      <mat-select [(ngModel)]="quizType" name="quizName" required>
+            <mat-option value={{quiz}} *ngFor="let quiz of quizNames">
+              {{quiz}}
+            </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="inputScale">	
+      <input matInput required='true' placeholder="Type Question" [(ngModel)]="quizQuestion" name="quizQuestion">
+    </mat-form-field>
+    <mat-form-field class="inputScale">	
+      <input matInput required='true' placeholder="Question Answer" [(ngModel)]="quizAnswer" name="quizAnswer">
+    </mat-form-field>
+    <mat-form-field class="inputScale">	
+      <input matInput required='true' placeholder="Option 1" [(ngModel)]="quizOption1" name="quizOption1">
+    </mat-form-field>
+    <mat-form-field class="inputScale">	
+      <input matInput required='true' placeholder="Option 2" [(ngModel)]="quizOption2" name="quizOption2">
+    </mat-form-field>
+    <mat-form-field class="inputScale">	
+      <input matInput required='true' placeholder="Option 3" [(ngModel)]="quizOption3" name="quizOption3">
+    </mat-form-field>
+    <mat-form-field class="inputScale">	
+      <input matInput required='true' placeholder="Option 4" [(ngModel)]="quizOption4" name="quizOption4">
+    </mat-form-field>
+
+  </form>
+
+  <button class="submitQuestion" (click)="testButton()" mat-button>Get Value</button>
+</div>
+<button mat-flat-button color="warn" (click)="logout()" class="logoutBtn">
+  <span><mat-icon class="logoutIcon">arrow_back_ios</mat-icon> </span>Logout
+</button>

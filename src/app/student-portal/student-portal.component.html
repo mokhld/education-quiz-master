@@ -1,0 +1,31 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav
+    class="studentSidenav"
+    mode="side"
+    #sidenav
+    opened
+    position="start"
+  >
+    <h2 class="portalTitle">Student Portal</h2>
+    <hr class="titleLine" />
+    <br />
+
+    <mat-selection-list #shoes [multiple]="false">
+      <a class="listOption" routerLink="./dashboard">
+        <mat-list-option [selected]="true">Dashboard</mat-list-option>
+      </a>
+      <a class="listOption" routerLink="./quiz">
+        <mat-list-option>Take a Quiz</mat-list-option>
+      </a>
+      <a class="listOption" routerLink="./performance">
+        <mat-list-option>Performance</mat-list-option>
+      </a>
+    </mat-selection-list>
+
+    <button mat-flat-button color="warn" (click)="logout()" class="logoutBtn">
+      <span><mat-icon class="logoutIcon">arrow_back_ios</mat-icon> </span>Logout
+    </button>
+  </mat-sidenav>
+
+  <router-outlet> </router-outlet>
+</mat-sidenav-container>
