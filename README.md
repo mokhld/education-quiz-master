@@ -1,6 +1,6 @@
 # Education Quiz App
 
-Functional CRUD app for both Students and Teachers, allowing students to login with Google OAuth and take mulitple quizzes. The result of each quiz is also dynamically produced. Features a Master Teacher login, allowing teachers to add, edit and delete quizzes and questions. Created in Angular, Typescript, Material UI and linked to Firebase serverless database, with Google OAuth.
+Functional CRUD app for both Students and Teachers, allowing students to login with Authentication and take mulitple quizzes. The result of each quiz is also dynamically produced. Features a Master Teacher login, allowing teachers to add, edit and delete quizzes and questions. Created in Angular, Typescript, Material UI and linked to Firebase serverless database, with Google OAuth.
 
 (Continually) Deployed on Netlify:
 
