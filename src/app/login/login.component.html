@@ -14,15 +14,14 @@
       <br>
       <button (click)="login()" class="loginButton" mat-button>Login</button>
       <br>
-      <h5 class="signUp">Do not have an account? <a class="signUpLink" routerLink="/register">Sign up</a></h5>
+      <h5 class="signUp">Do not have an account? <a class="signUpLink" routerLink="/register">Sign up</a><p> Or use demo login: test@email.com | Password: 123456</p></h5>
     </form>
 
-    <button (click)="openDialog()" class="teacherLoginButton" mat-button>Teacher Login</button>
     
-    <!-- <div  class="git-container">
-      <img class="git-link" src="..assets/images/giticon.png">
-    </div> --!>
-    
+      <button (click)="openDialog()" class="teacherLoginButton" mat-button>Teacher Login</button>
+      <small class="teacher-password">Demo Teacher Login Password: 00912</small>
+ 
+   
   </div>
 
   

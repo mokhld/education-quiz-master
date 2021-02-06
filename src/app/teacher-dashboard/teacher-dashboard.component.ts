@@ -44,9 +44,9 @@ export class TeacherDashboardComponent implements OnInit {
   quizOption2: any;
   quizOption3: any;
   quizOption4: any;
+  quizQuestions = [];
 
-
-
+  getQuizName: any;
   
   constructor(private shareData: DataService, public dialog: MatDialog, public fAuth: AngularFireAuth,
     private route: Router,) { }
@@ -57,7 +57,7 @@ export class TeacherDashboardComponent implements OnInit {
 
   }
 
-  testButton() {
+  addQuestion(quizType) {
 
     const newQuestion = {
       question: this.quizQuestion,
@@ -71,10 +71,73 @@ export class TeacherDashboardComponent implements OnInit {
     console.log(newQuestion)
 
     try {
-      this.db.collection("Year 8 Quizzes").doc(this.quizType).collection("questions").add(newQuestion)
+      this.db.collection("Year 8 Quizzes").doc(this.quizType).collection("questions").add(newQuestion).then(() => {
+
+        this.getQuestions(quizType)
+
+      }).then(() => {
+        this.quizQuestion = "";
+        this.quizAnswer = "";
+        this.quizOption1 = "";
+        this.quizOption2 = "";
+        this.quizOption3 = "";
+        this.quizOption4 = "";
+      })
       
     } catch (error) {
       console.log(error.message)
+    }
+  }
+
+
+  //Get Question Function
+  getQuestions(quiz){
+
+    this.quizQuestions =[];
+
+    this.getQuizName = quiz;
+
+    this.db.collection('Year 8 Quizzes').doc(quiz).collection('questions').onSnapshot((snapshot) => {
+      snapshot.docs.forEach((x) => {
+        //Extract the data needed for the quiz and push into the quizQuestions array
+       this.quizQuestions.push({
+          ID: x.id,
+          Question: x.data().question,
+          Answer: x.data().answer,
+          Option1: x.data().option1,
+          Option2: x.data().option2,
+          Option3: x.data().option3,
+          Option4: x.data().option4,
+        });
+       // console.log(this.quizQuestions);
+      });
+    });
+    console.log(this.quizQuestions)
+
+    this.deleteQuestion(this.quizQuestions, this.getQuizName)
+  }
+
+  deleteQuestion(questions, quiz){
+
+    console.log(questions.ID)
+
+
+    try {
+      this.db.collection('Year 8 Quizzes').doc(this.getQuizName).collection('questions').doc(questions.ID).delete().then(() => {
+
+        for (let i=0; i<this.quizQuestions.length; i++){
+
+          if (this.quizQuestions[i].ID == questions.ID){
+
+            this.quizQuestions.splice(i,1)
+         }
+        }
+      })
+      
+    } catch (error) {
+
+      console.log(error.message)
+      
     }
 
   }

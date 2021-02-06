@@ -1,39 +1,60 @@
-<h1>Welcome!</h1>
+<h1>Manage Quizzes</h1>
 <div class="add-quiz-container">
-  <h3 class="quiz-heading">Add New Question</h3>
+  <h3 class="quiz-heading">Select a quiz to edit</h3>
   
   <form class="quiz-form">
     <mat-form-field class="inputScale">
       <mat-label>Choose Quiz Type</mat-label>
       <mat-select [(ngModel)]="quizType" name="quizName" required>
-            <mat-option value={{quiz}} *ngFor="let quiz of quizNames">
+            <mat-option (click)="getQuestions(quiz)" value={{quiz}} *ngFor="let quiz of quizNames">
               {{quiz}}
             </mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field class="inputScale">	
+
+      <mat-form-field class="inputScale"> 
       <input matInput required='true' placeholder="Type Question" [(ngModel)]="quizQuestion" name="quizQuestion">
     </mat-form-field>
-    <mat-form-field class="inputScale">	
+    <mat-form-field class="inputScale"> 
       <input matInput required='true' placeholder="Question Answer" [(ngModel)]="quizAnswer" name="quizAnswer">
     </mat-form-field>
-    <mat-form-field class="inputScale">	
+    <mat-form-field class="inputScale"> 
       <input matInput required='true' placeholder="Option 1" [(ngModel)]="quizOption1" name="quizOption1">
     </mat-form-field>
-    <mat-form-field class="inputScale">	
+    <mat-form-field class="inputScale"> 
       <input matInput required='true' placeholder="Option 2" [(ngModel)]="quizOption2" name="quizOption2">
     </mat-form-field>
-    <mat-form-field class="inputScale">	
+    <mat-form-field class="inputScale"> 
       <input matInput required='true' placeholder="Option 3" [(ngModel)]="quizOption3" name="quizOption3">
     </mat-form-field>
-    <mat-form-field class="inputScale">	
+    <mat-form-field class="inputScale"> 
       <input matInput required='true' placeholder="Option 4" [(ngModel)]="quizOption4" name="quizOption4">
     </mat-form-field>
+      <button class="submitQuestion" [(ngModel)]="quizType" (click)="addQuestion(quizType)" mat-button>Get Value</button>
+
+    <mat-card class="question-card" *ngFor="let questions of quizQuestions">
+      <div class="questions-div" *ngIf="questions">
+           <mat-card-header>
+        <mat-card-title class="question-title">{{questions.Question}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h4 class="q-answer">Answer: {{questions.Answer}}</h4>
+        <mat-list role="list">
+          <mat-list-item role="listitem">{{questions.Option1}}</mat-list-item>
+          <mat-list-item role="listitem">{{questions.Option2}}</mat-list-item>
+          <mat-list-item role="listitem">{{questions.Option3}}</mat-list-item>
+          <mat-list-item role="listitem">{{questions.Option4}}</mat-list-item>
+        </mat-list>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="deleteQuestion(questions)" class="delete-q" mat-button>Delete</button>
+      </mat-card-actions>
+      </div>
+   
+    </mat-card>
 
   </form>
-
-  <button class="submitQuestion" (click)="testButton()" mat-button>Get Value</button>
-</div>
+<!-- </div>
 <button mat-flat-button color="warn" (click)="logout()" class="logoutBtn">
   <span><mat-icon class="logoutIcon">arrow_back_ios</mat-icon> </span>Logout
-</button>
+</button> -->
